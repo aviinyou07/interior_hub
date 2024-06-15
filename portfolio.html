@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio-Interior Hub</title>
+    <script src="https://kit.fontawesome.com/6ed26a2bee.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        .hero {
+        height:60vh;
+        background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('./img/project-bg-img-1.jpg') no-repeat center center/cover;
+        }
+      </style>
+       <script>
+        function validateForm() {
+            var firstName = document.forms["auditform"]["firstName"].value;
+            var lastName = document.forms["auditform"]["lastName"].value;
+            var phone = document.forms["auditform"]["phone"].value;
+            var email = document.forms["auditform"]["email"].value;
+            var mathAnswer = document.forms["auditform"]["mathAnswer"].value;
+            var mathAnswer2 = document.forms["auditform"]["mathAnswer2"].value;
+
+            if (firstName == "" || lastName == "" || phone == "" || email == "" || mathAnswer == "" || mathAnswer2 == "") {
+                alert("All fields are required.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="hero">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand active logo" aria-current="page" href="./index.html"><img src="./img/logo.png"
+                        alt="logo" width="100px" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./testimonial.html">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-center navrbtn">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group me-2" role="group" aria-label="First group">
+                                <a href="tel:+917027888321" class="call-button"><span><i class="fa-solid fa-phone"></i>
+                                    </span>7027888321</a>
+                            </div>
+                            <div class="btn-group me-2" role="group" aria-label="Second group">
+                                <div id="getAuditButtonNavBar">
+                                    <div class="get-audit-button">
+                                        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#TeamAuditButton"
+                                            aria-controls="offcanvasRight">
+                                            Get a free audit
+                                            <span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="midd text-center align-items-center">
+            <span>our exclusive client</span>
+            <h1>Project Sites</h1>
+            <p>We Have Solutions for All Your Space Related Issues!</p>
+        </div>
+        
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="TeamAuditButton" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="form-title">
+                <h4>Book your free audit</h4>
+                <p>
+                    Leave your details below, and our executive will be in touch
+                    shortly.
+                </p>
+            </div>
+            <div id="auditForm">
+                <form name="auditform" action="audit.php" method="post" onsubmit="return validateForm()">
+                    <input type="text" name="firstName" placeholder="First name" class="form-field col-12" />
+                    <input type="text" name="lastName" placeholder="Last name" class="form-field col-12" />
+                    <input type="number" name="phone" placeholder="Phone" class="form-field col-12" />
+                    <input type="email" name="email" placeholder="Email" class="form-field col-12" />
+                    <input type="text" name="mathAnswer" id="mathAnswer" placeholder="What does 2 + 3 equal?" class="form-field col-12" oninput="checkAnswer()" />
+                    <button type="submit" class="submit-button form-field col-12" id="submitButton">Secure Your Audit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+<section class="services">
+    <h2 class="title">Living Room</h2>
+    <div class="conatiner">
+        <div class="row d-flex ">
+            <div class="col-md-4 align-items-center"><span>Living Room</span>
+            <p class="">This is a short description elaborating the service that have mentioned above.​</p></div>
+            <div class="col-md-4"><img src="./img/project-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/project-2-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/project-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/project-2-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/project-5-1.jpg" alt=""></div>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <h2 class="title">kitchen</h2>
+    <div class="conatiner">
+        <div class="row">
+            <div class="col-md-4"><span>Kitchen</span>
+            <p>This is a short description elaborating the service that have mentioned above.​</p></div>
+            <div class="col-md-4"><img src="./img/kitchen-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/kitchen-5-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/kitchen-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/kitchen-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/kitchen-2-1.jpg" alt=""></div>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <h2 class="title"> office space</h2>
+    <div class="conatiner">
+        <div class="row">
+            <div class="col-md-4"><span>Office Space</span>
+            <p>This is a short description elaborating the service that have mentioned above.​</p></div>
+            <div class="col-md-4"><img src="./img/office-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/office-2-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/office-3-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/office-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/office-2-1.jpg" alt=""></div>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <h2 class="title">bedroom</h2>
+    <div class="conatiner">
+        <div class="row">
+            <div class="col-md-4"><span>Bedroom</span>
+            <p>This is a short description elaborating the service that have mentioned above.​</p></div>
+            <div class="col-md-4"><img src="./img/bedroom-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/bedroom-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/bedroom-3-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/bedroom-1-1.jpg" alt=""></div>
+            <div class="col-md-4"><img src="./img/bedroom-3-1.jpg" alt=""></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+    
+    <div class="footer-up d-flex justify-content-between align-items-center">
+        <div class="ttext">
+            <p>We’re ready to serve you.Just call us on <a href="tel:+917027888321" class="call-button">7027888321</a>
+            </p>
+        </div>
+        <div class="footer-upButton">
+            <div id="getAuditButtonFooter">
+                <div class="get-audit-button">
+                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#TeamAuditButtonFooter2"
+                        aria-controls="offcanvasRight">
+                        Get a free audit
+                        <span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="upr">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5 class="title">Dropping insights & updates to your inbox</h5>
+                    <div class="input-wrapper">
+                        <form action="subscribe.php" method="post">
+                            <input class="form-field" id="EmailInput" type="email" name="email" placeholder="Enter your Email" required>
+                            <div class="dispButton">
+                                <button class="bttn" id="newsLetter2" type="submit">I want in
+                                    <span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <p>A304 Habbitat, sec-99a, Gurgaon</p>
+                    <p>Phone: 7027888321</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="title">Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./testimonial.html">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="title">Google Partner</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7014.703689906899!2d76.9696102!3d28.4689488!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1718281075983!5m2!1sen!2sus"
+                        frameborder="inherit"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="socials">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2024 Interior Hub</div>
+    </div>
+    <div class="logo-footer">
+        <img src="./img/logo.png" alt="Footer Logo">
+    </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="TeamAuditButtonFooter2"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="form-title">
+                <h4>Book your free audit</h4>
+                <p>
+                    Leave your details below, and our executive will be in touch
+                    shortly.
+                </p>
+            </div>
+            <div id="auditForm">
+                <form name="auditform" action="audit.php" method="post" onsubmit="return validateForm()">
+                    <input type="text" name="firstName" placeholder="First name" class="form-field col-12" />
+                    <input type="text" name="lastName" placeholder="Last name" class="form-field col-12" />
+                    <input type="number" name="phone" placeholder="Phone" class="form-field col-12" />
+                    <input type="email" name="email" placeholder="Email" class="form-field col-12" />
+                    <input type="text" name="mathAnswer" id="mathAnswer2" placeholder="What does 2 + 3 equal?" class="form-field col-12" oninput="checkAnswer()" />
+                    <button type="submit" class="submit-button form-field col-12" id="submitButton2">Secure Your Audit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkAnswer() {
+            const userAnswer = document.getElementById('mathAnswer').value;
+            const userAnswer2 = document.getElementById('mathAnswer2').value;
+
+            const correctAnswer = '5';
+
+            const submitButton = document.getElementById('submitButton');
+            const submitButton2 = document.getElementById('submitButton2');
+
+
+            if (userAnswer === correctAnswer) {
+                submitButton.classList.add('show-button');
+            } else {
+                submitButton.classList.remove('show-button');
+            }
+            if (userAnswer2 === correctAnswer) {
+                submitButton2.classList.add('show-button');
+            } else {
+                submitButton2.classList.remove('show-button');
+            }
+        }
+    </script>
+    <script src="./js/caraousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
